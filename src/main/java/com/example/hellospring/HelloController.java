@@ -11,16 +11,16 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello, World!";
+        return "Hello, World!  Auto Deploy";
     }
 
     @GetMapping("/greet")
     public String greet(@RequestParam(defaultValue = "Guest") String name) {
-        return "Hello, " + name + "! Welcome to Spring Boot.";
+        return "Hello, " + name + "! Welcome to Spring Boot.Auto Deploy";
     }
 
     @GetMapping("/message")
     public String message() {
-        return "This is a simple Spring Boot REST API returning a String.";
+        return "This is a simple Spring Boot REST API returning a String.Auto Deploy";
     }
 }
