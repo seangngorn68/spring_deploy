@@ -11,12 +11,12 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello, World!  Jenkins 123";
+        return "Hello, World!  Jenkins 123  auto refresh";
     }
 
     @GetMapping("/greet")
     public String greet(@RequestParam(defaultValue = "Guest") String name) {
-        return "Hello, " + name + "! Welcome to Spring Boot.Auto Deploy Jenkins";
+        return "Hello, " + name + "! Welcome to Spring Boot.Auto Deploy Jenkins auto refresh";
     }
 
     @GetMapping("/message")
