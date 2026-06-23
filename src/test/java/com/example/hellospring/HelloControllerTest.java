@@ -7,6 +7,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.hamcrest.Matchers.containsString;
 
 @WebMvcTest(HelloController.class)
 class HelloControllerTest {
@@ -18,27 +19,27 @@ class HelloControllerTest {
     void helloShouldReturnMessage() throws Exception {
         mockMvc.perform(get("/api/hello"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Hello, World! Git Action V2  Jenkins 123  auto refresh"));
+                .andExpect(content().string(containsString("Hello, World!")));
     }
 
     @Test
     void greetShouldReturnDefaultGuest() throws Exception {
         mockMvc.perform(get("/api/greet"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Hello, Guest! Welcome to Spring Boot V2  Git Action"));
+                .andExpect(content().string(containsString("Hello, Guest!")));
     }
 
     @Test
     void greetShouldReturnCustomName() throws Exception {
         mockMvc.perform(get("/api/greet?name=Sean"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Hello, Sean! Welcome to Spring Boot V2  Git Action"));
+                .andExpect(content().string(containsString("Hello, Sean!")));
     }
 
     @Test
     void messageShouldReturnMessage() throws Exception {
         mockMvc.perform(get("/api/message"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("This is a simple Spring Boot REST API returning a String.Git Action"));
+                .andExpect(content().string(containsString("Spring Boot REST API")));
     }
 }

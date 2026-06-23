@@ -11,7 +11,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello, World! Git Action V2  Jenkins 123  auto refresh";
+        return "Hello, World! Git Action V3  Jenkins 123  auto refresh";
     }
 
     @GetMapping("/greet")
