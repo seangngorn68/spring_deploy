@@ -11,12 +11,12 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello, World! Git Action  Jenkins 123  auto refresh";
+        return "Hello, World! Git Action V2  Jenkins 123  auto refresh";
     }
 
     @GetMapping("/greet")
     public String greet(@RequestParam(defaultValue = "Guest") String name) {
-        return "Hello, " + name + "! Welcome to Spring Boot  Git Action";
+        return "Hello, " + name + "! Welcome to Spring Boot V2  Git Action";
     }
 
     @GetMapping("/message")
