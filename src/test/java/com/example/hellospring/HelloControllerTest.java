@@ -18,21 +18,21 @@ class HelloControllerTest {
     void helloShouldReturnMessage() throws Exception {
         mockMvc.perform(get("/api/hello"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Hello, World! Git Action  Jenkins 123  auto refresh"));
+                .andExpect(content().string("Hello, World! Git Action V2  Jenkins 123  auto refresh"));
     }
 
     @Test
     void greetShouldReturnDefaultGuest() throws Exception {
         mockMvc.perform(get("/api/greet"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Hello, Guest! Welcome to Spring Boot  Git Action"));
+                .andExpect(content().string("Hello, Guest! Welcome to Spring Boot V2  Git Action"));
     }
 
     @Test
     void greetShouldReturnCustomName() throws Exception {
         mockMvc.perform(get("/api/greet?name=Sean"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Hello, Sean! Welcome to Spring Boot  Git Action"));
+                .andExpect(content().string("Hello, Sean! Welcome to Spring Boot V2  Git Action"));
     }
 
     @Test
