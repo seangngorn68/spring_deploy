@@ -1,3 +1,10 @@
+// ─────────────────────────────────────────────────────
+// Jenkins pipeline is DISABLED
+// CI/CD is now handled by GitHub Actions (.github/workflows/deploy.yml)
+// To re-enable: uncomment the pipeline block below
+// ─────────────────────────────────────────────────────
+
+/*
 pipeline {
     agent any
 
@@ -52,3 +59,4 @@ pipeline {
         }
     }
 }
+*/

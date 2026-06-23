@@ -11,16 +11,16 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello, World!  Jenkins 123  auto refresh";
+        return "Hello, World! Git Action  Jenkins 123  auto refresh";
     }
 
     @GetMapping("/greet")
     public String greet(@RequestParam(defaultValue = "Guest") String name) {
-        return "Hello, " + name + "! Welcome to Spring Boot.Auto Deploy Jenkins auto refresh";
+        return "Hello, " + name + "! Welcome to Spring Boot  Git Action";
     }
 
     @GetMapping("/message")
     public String message() {
-        return "This is a simple Spring Boot REST API returning a String.Auto Deploy Jenkins";
+        return "This is a simple Spring Boot REST API returning a String.Git Action";
     }
 }
